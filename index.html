@@ -5,7 +5,7 @@
   <title>Kani's Homepage </title>
   <style>
     body {
-      color:white;
+      color: white;
       background-image:url("CineSKKU.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -55,31 +55,9 @@
         border: 0px;
         padding-left: 10px;
         padding-right: 10px;
-        padding-top: 5px;
+        padding-top: 10px;
         margin-right: 10px;
-
-        } .menubar li ul{
-          list-style: none;
-          display: none;
-          height: auto;
-          padding: 0px;
-          margin: 0px;
-          border: 0px;
-          background-color: black;
-          position: absolute;
-          width: 150px;
-          z-index: 1;
-
-          } .menubar li:hover ul {
-            display:block;
-
-            } .menubar li ul li {
-              float: left;
-              padding-top: 10px;
-              border-color: white;
-              border: 1px;
-              height: 30px
-            }
+        }
 
     .hype:link {
       color:black;
@@ -132,16 +110,9 @@
             z-index: 999;
             padding: 5px;
           }
-
-          #dropdowncontent li {
-            display: none;
-          }
-
-          .paused{
-            -webkit-animation-play-state:paused;
-            -moz-animation-play-state:paused;
-            -o-animation-play-state:paused;
-            animation-play-state:paused;
+          
+          #dropdowncontent li{
+              display: none;
           }
 
           .bar1, .bar2, .bar3 {
@@ -166,7 +137,6 @@
 
           .container {
             margin-top: 10px;
-            display: inline-block;
             cursor: pointer;
             animation-play-state: paused;
           }
@@ -187,28 +157,28 @@
       <div class="bar2"></div>
       <div class="bar3"></div>
 
-    <script>
-      function myFunction(x) {
-        x.classList.toggle("change");
-        document.getElementById('dropdowncontent').style.display = document.getElementById('dropdowncontent').style.display =='block' ?   'none' : 'block';
-      }
-    </script>
+      <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+          document.getElementById('dropdowncontent').style.display = document.getElementById('dropdowncontent').style.display =='block' ?   'none' : 'block';
+        }
+      </script>
     <!---script end --->
-
-    
-    <!---menu dropdowncontent --->
-      <ul id="dropdowncontent">
-        <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#">Search </a></li>
-          <!--- third section of menubar --->
-        <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#"> Image </a></li>
-          <!--- fourth section of menubar --->
-        <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#"> Map </a></li>
-          <!--- sixth section of menubar --->
-        <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#">Movie </a></li>
-        <!--- eighth section of menubar --->
-        <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#">Mail </a></li>
-      </ul>
+    <ul id="dropdowncontent">
+      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#">Search </a></li>
+        <!--- third section of menubar --->
+      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#"> Image </a></li>
+        <!--- fourth section of menubar --->
+      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#"> Map </a></li>
+        <!--- sixth section of menubar --->
+      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#">Movie </a></li>
+      <!--- eighth section of menubar --->
+      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#">Mail </a></li>
+    </ul>
     </div>
+    <!---menu dropdowncontent --->
+
+
   </ul>
 
   <div id="introduce">
