@@ -57,6 +57,8 @@
         padding-right: 10px;
         padding-top: 10px;
         margin-right: 10px;
+        animation-name: introduce_anime;
+        animation-duration: 2s;
         }
 
     .hype:link {
@@ -82,6 +84,7 @@
             margin-top: 100px;
             animation-name: introduce_anime;
             animation-duration: 3s;
+
           }
 
           body {
@@ -109,10 +112,8 @@
             position: fixed;
             z-index: 999;
             padding: 5px;
-          }
-          
-          #dropdowncontent li{
-              display: none;
+          } .menubar li {
+            width: 0%;
           }
 
           .bar1, .bar2, .bar3 {
@@ -135,50 +136,60 @@
             transform: rotate(45deg) translate(-8px, -8px) ;
           }
 
-          .container {
-            margin-top: 10px;
+          #container {
+            position: absolute;
+            margin-left: -30px;
             cursor: pointer;
+          }
+
+          #menu {
+            display: none;
+            position: absolute;
+            width: 100%;
+            background: white;
+          } #menu li {
             animation-play-state: paused;
           }
         }
 
   </style>
+
+  <script type="text/javascript">
+    function myFunction(x) {
+      x.classList.toggle("change");
+      document.getElementById('menu').style.display = document.getElementById('menu').style.display =='block' ?   'none' : 'block';
+    }
+
+
+  </script>
 </head>
 <body>
   <!--- menubar of my homepage --->
   <ul class="menubar">
     <!--- first section of menubar --->
-    <li style="animation-name: introduce_anime; animation-duration: 2s;"> <a class=hype href="index.html"> CineSKKU </a></li>
+    <li> <a class=hype href="index.html"> CineSKKU </a></li>
     <!--- second section of menubar --->
 
     <!---menu icon javascript--->
-    <div class="container" onclick="myFunction(this)" style="float:right; margin-right:20px;">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-
-      <script>
-        function myFunction(x) {
-          x.classList.toggle("change");
-          document.getElementById('dropdowncontent').style.display = document.getElementById('dropdowncontent').style.display =='block' ?   'none' : 'block';
-        }
-      </script>
-    <!---script end --->
-    <ul id="dropdowncontent">
-      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#">Search </a></li>
-        <!--- third section of menubar --->
-      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#"> Image </a></li>
-        <!--- fourth section of menubar --->
-      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#"> Map </a></li>
-        <!--- sixth section of menubar --->
-      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#">Movie </a></li>
-      <!--- eighth section of menubar --->
-      <li style="animation-name: introduce_anime; animation-duration: 2s; float:right;"> <a class=hype href="#">Mail </a></li>
-    </ul>
-    </div>
+    <li style=" float: right;">
+      <div id="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul id="menu">
+          <li style="float:right;"> <a class=hype href="#">Search </a></li>
+            <!--- third section of menubar --->
+          <li style="float:right;"> <a class=hype href="#"> Image </a></li>
+            <!--- fourth section of menubar --->
+          <li style="float:right;"> <a class=hype href="#"> Map </a></li>
+            <!--- sixth section of menubar --->
+          <li style="float:right;"> <a class=hype href="#">Movie </a></li>
+          <!--- eighth section of menubar --->
+          <li style="float:right;"> <a class=hype href="#">Mail </a></li>
+        </ul>
+      </div>
+    </li>
     <!---menu dropdowncontent --->
-
-
   </ul>
 
   <div id="introduce">
@@ -187,7 +198,7 @@
     <h2 align=center> WHO WE ARE <h2>
     <h4 align=center>영화를 사랑하는 첫번째 방법은<br>
         좋아하는 영화를 2번, 3번 보는것이고<br>
-        두 번째 방법은 그 영화에 대한 평을 쓰는 것이며,<br>
+        두 번째 방법은 그 영화에 대한 평을 쓰는 것이며, <br>
         마지막 세 번째 방법은 직접 영화를 만드는 것이다.<br><br>
       </h4>
 
