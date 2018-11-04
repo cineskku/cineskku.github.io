@@ -14,6 +14,42 @@ hr {
   border: 1px solid white;
 }
 
+.pagenation {
+    text-align:center;
+    margin-left: auto;
+    margin-right: 50px;
+
+    }.pagenation  li {
+      display:inline;
+      float: none;
+      vertical-align:middle;
+
+      }.pagenation  li a {
+        display:-moz-inline-stack;  /*FF2*/
+        display:inline-block;
+        vertical-align:top;
+        padding:4px;
+        margin-right:3px;
+        width:15px !important;
+        background-color: white;
+        color:#000;
+        font:bold 12px tahoma;
+        border:1px solid #eee;
+        text-align:center;
+        text-decoration:none;
+        width /**/:26px;    /*IE 5.5*/
+
+        }.pagenation  li a.now {
+          color:#fff;
+          background-color:#f40;
+          border:1px solid #f40;
+
+          }.pagenation  li a:hover, ul li a:focus {
+            color:#fff;
+            border:1px solid #f40;
+            background-color:#f40;
+          }
+
 .map_design {
   width: 100%;
   height: 500px;
