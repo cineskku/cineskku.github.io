@@ -19,6 +19,7 @@
       x.classList.toggle("change");
       document.getElementById('menu').style.display = document.getElementById('menu').style.display =='block' ?   'none' : 'block';
     }
+
   </script>
 </head>
 <body>
@@ -61,17 +62,31 @@
         영화는 리얼리티가 생명이라고 생각하는 그들에게 마침 앙숙인 두 야쿠자 ‘무토파’와 ‘이케가미파’의 결전을 실시간으로 찍을 수 있는 일생일대의 기회가 찾아오게 되는데… <br>
       </h3>
     </p>
-    <ul class="pagenation">
-      <li><a href="movie.html">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">6</a></li>
-      <li><a href="#">7</a></li>
-      <li><a href="#">8</a></li>
-      <li><a href="#">9</a></li>
-      <li><a href="#">10</a></li>
+    <ul class="pagenation" id="pagenation">
+      <li> <a href="#" class="next_button">&laquo;</a> </li>
+      <script>
+        var array_list = ["movie.html", "#", "#", "#", "#", "#"];
+
+        for (var i = 1; i <= array_list.length; i++) {
+
+          if( i > 5 )
+            break;
+
+          var icon_li = document.createElement("li");
+            icon_li.setAttribute("id", "pagenation_li"+i);
+
+          var icon_a = document.createElement("a");
+            icon_a.setAttribute("href", array_list[i-1]);
+            icon_a.appendChild(document.createTextNode(i));
+
+          var ul = document.getElementById("pagenation");
+            ul.appendChild(icon_li);
+
+          var li = document.getElementById("pagenation_li"+i);
+            li.appendChild(icon_a);
+        }
+      </script>
+      <li> <a href="#" class="next_button">&raquo;</a> </li>
     </ul>
   </div>
 </body>

@@ -14,11 +14,21 @@ hr {
   border: 1px solid white;
 }
 
+.next_button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.next_button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
 .pagenation {
     text-align:center;
-    margin-left: auto;
-    margin-right: 50px;
-
+    margin-right: 35px;
     }.pagenation  li {
       display:inline;
       float: none;
