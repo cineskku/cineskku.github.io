@@ -25,10 +25,48 @@ hr {
     color: black;
 }
 
+@media only screen and (max-device-width: 320px) {
+  .pagenation {
+      text-align:center;
+      
+
+      }.pagenation  li {
+        display:inline;
+        float: none;
+        vertical-align:middle;
+
+        }.pagenation  li a {
+          display:-moz-inline-stack;  /*FF2*/
+          display:inline-block;
+          vertical-align:top;
+          padding:4px;
+          margin-right:3px;
+          width:15px !important;
+          background-color: white;
+          color:#000;
+          font:bold 12px tahoma;
+          border:1px solid #eee;
+          text-align:center;
+          text-decoration:none;
+          width /**/:26px;    /*IE 5.5*/
+
+          }.pagenation  li a.now {
+            color:#fff;
+            background-color:#f40;
+            border:1px solid #f40;
+
+            }.pagenation  li a:hover, ul li a:focus {
+              color:#fff;
+              border:1px solid #f40;
+              background-color:#f40;
+            }
+}
 
 .pagenation {
     text-align:center;
+    margin-left: -10px;
     margin-right: 35px;
+
     }.pagenation  li {
       display:inline;
       float: none;

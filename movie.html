@@ -65,11 +65,15 @@
     <ul class="pagenation" id="pagenation">
       <li> <a href="#" class="next_button">&laquo;</a> </li>
       <script>
+        var viewportWidth = screen.width;
         var array_list = ["movie.html", "#", "#", "#", "#", "#"];
 
         for (var i = 1; i <= array_list.length; i++) {
 
-          if( i > 5 )
+          if(viewportWidth <= 320 && i > 4)
+            break;
+
+          else if(i > 5)
             break;
 
           var icon_li = document.createElement("li");
