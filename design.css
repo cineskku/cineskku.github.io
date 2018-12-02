@@ -120,22 +120,31 @@ hr {
 
     }
 
-.hype:link {
+.hype {
   color:black;
   text-decoration: none;
   background-color: white;
+  outline: none;
+
   } .hype:visited {
     color:black;
     text-decoration: none;
     background-color: white;
+    outline: none;
+
     } .hype:hover {
       color:gray;
       text-decoration: none;
       background-color: white;
-      } .hype:active {
+
+      } .hype:active .hype:focus{
         color: black;
         text-decoration: none;
         background-color: white;
+
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
       }
 
     @media screen and ( max-width: 720px ){
