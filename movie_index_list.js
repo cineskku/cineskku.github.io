@@ -69,8 +69,8 @@ function movie_list() {
   for (var i = 0; i < array_list; i++) {
 
     var urlLink = document.createElement("a");
-      urlLink.setAttribute("href", objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie")[i].childNodes[0].nodeValue);
-      urlLink.appendChild(document.createTextNode(objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie")[i].childNodes[1].nodeValue));
+      urlLink.setAttribute("href", objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie")[i].getElementsByTagName("url")[0].childNodes[0].nodeValue);
+      urlLink.appendChild(document.createTextNode(objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie")[i].getElementsByTagName("name")[0].childNodes[0].nodeValue));
 
     var ul = document.getElementById("introduce_for_write");
       ul.appendChild(urlLink);
