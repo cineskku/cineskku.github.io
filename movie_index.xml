@@ -2,14 +2,14 @@
 <movie_index>
   <movie>
     <name>김우주는 개밥바라기</name>
-    <url>"movie/movie_gaebabbaragi.html"</url>
+    <url>movie/movie_gaebabbaragi.html</url>
   </movie>
   <movie>
     <name>풍선껌(BUBBLE GUM)</name>
-    <url>"movie/movie_bubblegum.html"</url>
+    <url>movie/movie_bubblegum.html</url>
   </movie>
   <movie>
     <name>지옥이 뭐가 나빠</name>
-    <url>"movie/movie_jigoku.html"</url>
+    <url>movie/movie_jigoku.html</url>
   </movie>
 </movie_index>
