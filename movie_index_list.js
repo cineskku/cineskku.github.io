@@ -72,8 +72,13 @@ function movie_list() {
       urlLink.setAttribute("href", objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie")[i].getElementsByTagName("url")[0].childNodes[0].nodeValue);
       urlLink.appendChild(document.createTextNode(objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie")[i].getElementsByTagName("name")[0].childNodes[0].nodeValue));
 
+    var h2Link = document.createElement("H2");
+      h2Link.setAttribute("style", "color:center");
+      h2Link.setAttribute("align", "center");
+      h2Link.appendChild(urlLink);
+
     var ul = document.getElementById("introduce_for_write");
-      ul.appendChild(urlLink);
+      ul.appendChild(h2Link);
 
     var hypun = document.createElement("hr");
       ul.appendChild(hypun);
