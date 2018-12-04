@@ -6,26 +6,13 @@ function myFunction(x) {
 
 function list_number() {
 
-  var browser = navigator.userAgent.toLocaleLowerCase();
-  var objDoc;
-
-  if (browser.indexOf('firefox') != -1) {
-      objDoc = document.implementation.createDocument("", "", null);
-      objDoc.async = false;
-      objDoc.load("movie_index.xml");
-  } else if (browser.indexOf('trident') != -1) {
-      objDoc = new ActiveXObject("MSXML.DOMDocument");
-      objDoc.async = false;
-      objDoc.load("movie_index.xml");
-  } else {
-    // Chrome, Safari, Opera
-      var xhttp = new XMLHttpRequest();
-      xhttp.open("GET", "movie_index.xml", true); // https://xhr.spec.whatwg.org/#the-open%28%29-method
-      objDoc = xhttp.responseXML;
-      xhttp.send(null);
+  if (window.XMLHttpRequest) {
+    xhttp = new XMLHttpRequest();
+  } else {    // IE 5/6
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
 
-  array_list = objDoc.childNodes.length;
+  array_list = objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie").length;
 
   var viewportWidth = screen.width;
 
@@ -42,7 +29,7 @@ function list_number() {
       icon_li.setAttribute("id", "pagenation_li"+i);
 
     var icon_a = document.createElement("a");
-      icon_a.setAttribute("href", array_list[i-1]);
+      icon_a.setAttribute("href", objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie")[i-1].getElementsByTagName("name")[0].childNodes[0].nodeValue);
       icon_a.appendChild(document.createTextNode(i));
 
     var ul = document.getElementById("pagenation");
