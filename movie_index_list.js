@@ -64,13 +64,13 @@ function movie_list() {
   xhttp.send(null);
   var objDoc = xhttp.responseXML;
 
-  array_list = objDoc.getElementsByTagName("movie_index").length;
+  array_list = objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie").length;
 
   for (var i = 0; i < array_list; i++) {
 
     var urlLink = document.createElement("a");
-      urlLink.setAttribute("href", objDoc.getElementsByTagName("movie_index")[i].getElementsByTagName("movie")[0].childNodes[0].nodeValue);
-      urlLink.appendChild(document.createTextNode(objDoc.getElementsByTagName("movie_index")[i].getElementsByTagName("movie")[1].childNodes[0].nodeValue));
+      urlLink.setAttribute("href", objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie")[i].childNodes[0].nodeValue);
+      urlLink.appendChild(document.createTextNode(objDoc.getElementsByTagName("movie_index")[0].getElementsByTagName("movie")[i].childNodes[1].nodeValue));
 
     var ul = document.getElementById("introduce_for_write");
       ul.appendChild(urlLink);
