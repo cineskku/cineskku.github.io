@@ -62,11 +62,7 @@ function movie_list() {
 
   xhttp.open("GET", "movie_index.xml", false);
   xhttp.send(null);
-  xhttp.onreadystatechange = function(){
-    
-    var objDoc = xhttp.responseXML; 
-
-  }
+  var objDoc = xhttp.responseXML; 
 
   array_list = objDoc.childNodes.length;
 
