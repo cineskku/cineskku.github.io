@@ -120,6 +120,23 @@ hr {
 
     }
 
+.hype_list {
+  color:white;
+  text-decoration: none;
+  outline: none;
+
+  } .hype_list:visited {
+    color:white;
+    text-decoration: none;
+    outline: none;
+
+    } .hype:active .hype:focus {
+      color:white;
+      text-decoration: none;
+      outline: 0;
+      border: none;
+    }
+
 .hype {
   color:black;
   text-decoration: none;
