@@ -57,20 +57,14 @@ function movie_list() {
   var browser = navigator.userAgent.toLocaleLowerCase();
   var objDoc;
 
-  if (browser.indexOf('firefox') != -1) {
-      objDoc = document.implementation.createDocument("", "", null);
-      objDoc.async = false;
-      objDoc.load("movie_index.xml");
-  } else if (browser.indexOf('trident') != -1) {
+  if (browser.indexOf('trident') != -1) {
       objDoc = new ActiveXObject("MSXML.DOMDocument");
       objDoc.async = false;
       objDoc.load("movie_index.xml");
   } else {
-    // Chrome, Safari, Opera
-      var xhttp = new XMLHttpRequest();
-      xhttp.open("GET", "movie_index.xml", true); // https://xhr.spec.whatwg.org/#the-open%28%29-method
-      objDoc = xhttp.responseXML;
-      xhttp.send(null);
+      objDoc = document.implementation.createDocument("", "", null);
+      objDoc.async = false;
+      objDoc.load("movie_index.xml");
   }
 
   array_list = objDoc.childNodes.length;
@@ -81,7 +75,7 @@ function movie_list() {
       urlLink.setAttribute("href", objDoc.getElementById("movie_index")[i].getElementById("movie")[0].childNodes[0].nodeValue);
       urlLink.createTextNode(document.createTextNode(objDoc.getElementById("movie_index")[i].getElementById("movie")[1].childNodes[0].nodeValue));
 
-    var ul = document.getElementById("introduce_for_write");
+    var ul = document.getElementById("introduce_for_writexml");
       ul.appendChild(urlLink);
 
     var hypun = document.createElement("hr");
