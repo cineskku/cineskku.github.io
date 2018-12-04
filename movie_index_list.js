@@ -70,7 +70,7 @@ function movie_list() {
 
     var urlLink = document.createElement("a");
       urlLink.setAttribute("href", objDoc.getElementsByTagName("movie_index")[i].getElementsByTagName("movie")[0].childNodes[0].nodeValue);
-      urlLink.createTextNode(document.createTextNode(objDoc.getElementsByTagName("movie_index")[i].getElementsByTagName("movie")[1].childNodes[0].nodeValue));
+      urlLink.createTextNode(objDoc.getElementsByTagName("movie_index")[i].getElementsByTagName("movie")[1].childNodes[0].nodeValue);
 
     var ul = document.getElementById("introduce_for_writexml");
       ul.appendChild(urlLink);
