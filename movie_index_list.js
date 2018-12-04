@@ -72,7 +72,7 @@ function movie_list() {
       urlLink.setAttribute("href", objDoc.getElementsByTagName("movie_index")[i].getElementsByTagName("movie")[0].childNodes[0].nodeValue);
       urlLink.appendChild(document.createTextNode(objDoc.getElementsByTagName("movie_index")[i].getElementsByTagName("movie")[1].childNodes[0].nodeValue));
 
-    var ul = document.getElementById("introduce_for_writexml");
+    var ul = document.getElementById("introduce_for_write");
       ul.appendChild(urlLink);
 
     var hypun = document.createElement("hr");
