@@ -60,7 +60,7 @@ function movie_list() {
     xhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
 
-  xhttp.open("GET", "pricing.xml", false);
+  xhttp.open("GET", "movie_index.xml", false);
   xhttp.send(null);
   xhttp.onreadystatechange = function(){
 
