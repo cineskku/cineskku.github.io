@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+  <title>SKKU Cineville </title>
+  <link rel="stylesheet" type="text/css" href="design.css">
+  <style>
+
+    @keyframes introduce_anime {
+      0% {transform: translateY(-1000px);}
+      75% {transform: translateY(10px);}
+      to {transform: translateY(0px);}
+    }
+
+  </style>
+  <script type="text/javascript" src="movie_index_list.js"></script>
+</head>
+<body>
+  <!--- menubar of my homepage --->
+  <ul class="menubar">
+    <!--- first section of menubar --->
+    <li style="margin-left:10px; margin-top:10px;"> <a class=hype href="index.html"> CineSKKU </a></li>
+    <!--- second section of menubar --->
+
+    <!---menu icon javascript--->
+    <li style="float: right; margin-right:10px; margin-top:5px;">
+      <div id="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </li>
+    <li id="menu" style="float:right; margin-top:10px;">
+      <ul>
+        <li> <a class=hype href="#">Search </a></li>
+        <li> <a class=hype href="#"> Image </a></li>
+        <li> <a class=hype href="map.html"> Map </a></li>
+        <li> <a class=hype href="movie.html">Movie </a></li>
+        <li> <a class=hype href="#">Mail </a></li>
+      </ul>
+    </li>
+    <!---menu dropdowncontent --->
+  </ul>
+
+  <div id="introduce_for_write">
+    <h1 align="center"> 지옥이 뭐가 나빠 </h1>
+    <iframe class="map_design"src="https://www.youtube.com/embed/nHL3-0PpGuE" allowfullscreen></iframe>
+    <hr>
+    <p>
+      <h3>
+        야쿠자 보스 무토는 인맥을 동원해 아내의 소원인 배우 지망생 딸을 영화에 데뷔 시키려 하지만 딸의 말썽으로 촬영이 무산된다.<br><br>
+        어떻게든 영화를 완성시키기 위해 무토는 직접 제작자로 나서 야쿠자 조직원들을 스탭으로 동원한다. <br><br>
+        얼떨결에 무토의 딸과 엮여 영화 감독으로 소개 된 코지는 강제로 이 영화의 연출 의뢰를 받게 된다. <br><br>
+        목숨의 위협을 느낀 코지는 일생의 영화를 찍는 게 소원인 영화광 히라타와 3인방 ‘퍽 바머스’에게 구원의 손길을 내민다. <br><br>
+        영화는 리얼리티가 생명이라고 생각하는 그들에게 마침 앙숙인 두 야쿠자 ‘무토파’와 ‘이케가미파’의 결전을 실시간으로 찍을 수 있는 일생일대의 기회가 찾아오게 되는데… <br>
+      </h3>
+    </p>
+    <ul class="pagenation" id="pagenation">
+      <script type="text/javascript">
+        list_number();
+      </script>
+    </ul>
+  </div>
+</body>
+</html>
