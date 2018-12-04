@@ -13,14 +13,7 @@
     }
 
   </style>
-
-  <script type="text/javascript">
-    function myFunction(x) {
-      x.classList.toggle("change");
-      document.getElementById('menu').style.display = document.getElementById('menu').style.display =='block' ?   'none' : 'block';
-    }
-
-  </script>
+  <script type="text/javascript" src="movie_index_list.js"></script>
 </head>
 <body>
   <!--- menubar of my homepage --->
@@ -42,7 +35,7 @@
         <li> <a class=hype href="#">Search </a></li>
         <li> <a class=hype href="#"> Image </a></li>
         <li> <a class=hype href="map.html"> Map </a></li>
-        <li> <a class=hype href="movie_bubblegum.html">Movie </a></li>
+        <li> <a class=hype href="movie.html">Movie </a></li>
         <li> <a class=hype href="#">Mail </a></li>
       </ul>
     </li>
@@ -50,49 +43,11 @@
   </ul>
 
   <div id="introduce_for_write">
-    <h1 align="center"> 지옥이 뭐가 나빠 </h1>
-    <iframe class="map_design"src="https://www.youtube.com/embed/nHL3-0PpGuE" allowfullscreen></iframe>
-    <hr>
-    <p>
-      <h3>
-        야쿠자 보스 무토는 인맥을 동원해 아내의 소원인 배우 지망생 딸을 영화에 데뷔 시키려 하지만 딸의 말썽으로 촬영이 무산된다.<br><br>
-        어떻게든 영화를 완성시키기 위해 무토는 직접 제작자로 나서 야쿠자 조직원들을 스탭으로 동원한다. <br><br>
-        얼떨결에 무토의 딸과 엮여 영화 감독으로 소개 된 코지는 강제로 이 영화의 연출 의뢰를 받게 된다. <br><br>
-        목숨의 위협을 느낀 코지는 일생의 영화를 찍는 게 소원인 영화광 히라타와 3인방 ‘퍽 바머스’에게 구원의 손길을 내민다. <br><br>
-        영화는 리얼리티가 생명이라고 생각하는 그들에게 마침 앙숙인 두 야쿠자 ‘무토파’와 ‘이케가미파’의 결전을 실시간으로 찍을 수 있는 일생일대의 기회가 찾아오게 되는데… <br>
-      </h3>
-    </p>
-    <ul class="pagenation" id="pagenation">
-      <li> <a href="#" class="next_button">&laquo;</a> </li>
-      <script>
-        var viewportWidth = screen.width;
-        var array_list = ["movie_bubblegum.html", "movie.html", "#", "#", "#", "#"];
-
-        for (var i = 1; i <= array_list.length; i++) {
-
-          if(viewportWidth <= 320 && i > 4)
-            break;
-          else if(viewportWidth > 720)
-            ;
-          else if(i > 5)
-            break;
-
-          var icon_li = document.createElement("li");
-            icon_li.setAttribute("id", "pagenation_li"+i);
-
-          var icon_a = document.createElement("a");
-            icon_a.setAttribute("href", array_list[i-1]);
-            icon_a.appendChild(document.createTextNode(i));
-
-          var ul = document.getElementById("pagenation");
-            ul.appendChild(icon_li);
-
-          var li = document.getElementById("pagenation_li"+i);
-            li.appendChild(icon_a);
-        }
-      </script>
-      <li> <a href="#" class="next_button">&raquo;</a> </li>
-    </ul>
+    <h1 align="center"> Movie List </h1>
+    <script type="text/javascript">
+      movie_list();
+    </script>
   </div>
 </body>
+<script src="movie_index_list.js"></script>
 </html>
