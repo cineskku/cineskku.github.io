@@ -54,17 +54,19 @@ function list_number() {
 }
 
 function movie_list() {
-  var browser = navigator.userAgent.toLocaleLowerCase();
-  var objDoc;
+  if (window.XMLHttpRequest) {
+    xhttp = new XMLHttpRequest();
+  } else {    // IE 5/6
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
 
-  if (browser.indexOf('trident') != -1) {
-      objDoc = new ActiveXObject("MSXML.DOMDocument");
-      objDoc.async = false;
-      objDoc.load("movie_index.xml");
-  } else {
-      objDoc = document.implementation.createDocument("", "", null);
-      objDoc.async = false;
-      objDoc.load("movie_index.xml");
+  xhttp.open("GET", "pricing.xml", false);
+  xhttp.send(null);
+  xhttp.onreadystatechange = function(){
+
+    if (xhttp.status == "200")
+      var objDoc = xhttp.responseXML; 
+
   }
 
   array_list = objDoc.childNodes.length;
